@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="login-wrap">
+    <form class="card" data-cy="login-form" novalidate>
+      <h1>Entrar</h1>
+
+      <label for="email">E-mail</label>
+      <input id="email" type="email" data-cy="login-email" autocomplete="off">
+
+      <label for="senha">Senha</label>
+      <input id="senha" type="password" data-cy="login-senha" autocomplete="off">
+
+      <button type="submit" data-cy="login-submit">Entrar</button>
+
+      <div class="erro oculto" data-cy="login-erro"></div>
+    </form>
+  </div>
+
+  <script src="/login.js"></script>
+</body>
+</html>

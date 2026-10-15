@@ -1,0 +1,16 @@
+{
+  "name": "atividade-cypress",
+  "version": "1.0.0",
+  "description": "Testes E2E com Cypress para login e cadastro de produtos",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test start http://localhost:3000 cy:run"
+  },
+  "devDependencies": {
+    "cypress": "^16.2.0",
+    "start-server-and-test": "^3.0.13"
+  }
+}

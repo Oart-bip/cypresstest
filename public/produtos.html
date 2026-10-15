@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Produtos</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="topo">
+    <strong>Gestão de Produtos</strong>
+    <div>
+      <span data-cy="usuario-logado"></span>
+      <button type="button" data-cy="logout-btn">Sair</button>
+    </div>
+  </header>
+
+  <main class="conteudo">
+    <form class="card" data-cy="produto-form" novalidate>
+      <h2 data-cy="produto-form-titulo">Novo produto</h2>
+
+      <label for="nome">Nome</label>
+      <input id="nome" type="text" data-cy="produto-nome" autocomplete="off">
+
+      <label for="preco">Preço (R$)</label>
+      <input id="preco" type="number" step="0.01" data-cy="produto-preco" autocomplete="off">
+
+      <label for="categoria">Categoria</label>
+      <select id="categoria" data-cy="produto-categoria">
+        <option value="Eletrônicos">Eletrônicos</option>
+        <option value="Livros">Livros</option>
+        <option value="Alimentos">Alimentos</option>
+      </select>
+
+      <button type="submit" data-cy="produto-salvar">Cadastrar</button>
+      <button type="button" class="secundario oculto" data-cy="produto-cancelar">Cancelar edição</button>
+
+      <div class="erro oculto" data-cy="produto-erro"></div>
+      <div class="sucesso oculto" data-cy="produto-sucesso"></div>
+    </form>
+
+    <section class="card">
+      <h2>Produtos cadastrados (<span data-cy="produtos-total">0</span>)</h2>
+      <p data-cy="produtos-vazio">Nenhum produto cadastrado.</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Categoria</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody data-cy="produtos-lista"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="/produtos.js"></script>
+</body>
+</html>
